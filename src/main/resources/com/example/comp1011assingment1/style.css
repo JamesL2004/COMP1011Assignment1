@@ -1,0 +1,21 @@
+.root{
+    -fx-font-size: 22px;
+    -fx-font-family: sans-serif;
+    -fx-background-image: url("images/background-image.jpg");
+    -fx-background-size: cover;
+}
+.label{
+    -fx-text-fill: #0e0e0e;
+}
+
+.button{
+    -fx-border-radius: 20pt;
+    -fx-background-radius: 20pt;
+}
+
+.date-picker .month-year-pane .label{
+    -fx-text-fill: #332e31;
+}
+#titleLabel{
+    -fx-font-size: 40px;
+}
