@@ -1,5 +1,7 @@
 package com.example.comp1011assingment1;
 
+import javafx.scene.chart.XYChart;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -33,7 +35,28 @@ public class DBUtility {
         }
         return platforms;
     }
-
+    public static XYChart.Series<String, Integer> getScatterChartData() throws SQLException {
+        XYChart.Series<String, Integer> series = new XYChart.Series<>();
+        String sql = "SELECT title AS 'Streaming Service', subCount AS 'Subscriber Count', price AS 'Subscription Cost' \n" +
+                "FROM platforms \n" +
+                "ORDER BY platformID ASC \n" +
+                "LIMIT 15;\n";
+        try(
+                Connection conn = DriverManager.getConnection(connectUrl,user, password);
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+        )
+        {
+            while(resultSet.next()){
+                series.getData().add(new XYChart.Data<>(resultSet.getString("Streaming Service"), resultSet.getInt("Subscriber Count")));
+                series.setName(resultSet.getString("Streaming Service"));
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return series;
+    }
 
 }
 
