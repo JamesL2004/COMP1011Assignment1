@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Young+Serif&display=swap');
 .root{
-    -fx-font-size: 22px;
-    -fx-font-family: sans-serif;
+    -fx-font-size: 20px;
     -fx-background-image: url("images/background-image.jpg");
     -fx-background-size: cover;
 }
@@ -9,13 +9,31 @@
 }
 
 .button{
-    -fx-border-radius: 20pt;
-    -fx-background-radius: 20pt;
+    -fx-font-family: 'Young Serif', serif;
+    -fx-border-radius: 10pt;
+    -fx-background-radius: 10pt;
 }
-
-.date-picker .month-year-pane .label{
-    -fx-text-fill: #332e31;
+.axis{
+    -fx-font-family: 'Young Serif', serif;
+}
+.axis-label{
+    -fx-text-fill: #E21B1B;
+    -fx-font-size: 25px;
+}
+#chartView{
+    -fx-background-image: url("images/chart-backgound-img.jpg");
+    -fx-background-size: cover;
 }
 #titleLabel{
-    -fx-font-size: 40px;
+    -fx-font-family: 'Young Serif', serif;
+    -fx-font-size: 35px;
 }
+#titleLabel2{
+    -fx-text-fill: #E21B1B;
+    -fx-font-family: 'Young Serif', serif;
+    -fx-font-size: 35px;
+}
+#titleAxis, #numAxis{
+    -fx-tick-label-fill: #E21B1B;
+}
+

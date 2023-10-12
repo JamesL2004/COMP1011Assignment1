@@ -8,20 +8,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011assingment1.TableViewController">
    <children>
       <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1200.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label id="titleLabel" text="Top 50 Most Subscribed Streaming Services" />
-            <TableView fx:id="tableView" prefHeight="429.0" prefWidth="1200.0">
+            <TableView fx:id="tableView" prefHeight="429.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
               <columns>
                   <TableColumn fx:id="idColumn" maxWidth="196.0" minWidth="-Infinity" prefWidth="62.0" text="ID" />
                 <TableColumn fx:id="titleColumn" maxWidth="257.0" minWidth="-Infinity" prefWidth="144.0" text="Service" />
                 <TableColumn fx:id="parentCompanyColumn" prefWidth="218.0" text="Parent Company" />
                   <TableColumn fx:id="numOfSubsColumn" minWidth="0.0" prefWidth="274.0" text="Number of Subscribers" />
-                  <TableColumn fx:id="priceColumn" prefWidth="123.0" text="Base Price" />
-                  <TableColumn fx:id="availibleCountriesColumn" prefWidth="318.0" text="Availible Countries" />
+                  <TableColumn fx:id="priceColumn" prefWidth="137.0" text="Base Price ($)" />
+                  <TableColumn fx:id="availibleCountriesColumn" prefWidth="304.0" text="Availible Countries" />
               </columns>
             </TableView>
             <Button mnemonicParsing="false" onAction="#changeToChartsView" text="Chart View" />

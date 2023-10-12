@@ -22,6 +22,7 @@ public class ChartViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        scatterChart.setLegendVisible(false);
         try {
             scatterChart.getData().addAll(DBUtility.getScatterChartData());
         } catch (SQLException e) {

@@ -37,10 +37,10 @@ public class DBUtility {
     }
     public static XYChart.Series<String, Integer> getScatterChartData() throws SQLException {
         XYChart.Series<String, Integer> series = new XYChart.Series<>();
-        String sql = "SELECT title AS 'Streaming Service', subCount AS 'Subscriber Count', price AS 'Subscription Cost' \n" +
+        String sql = "SELECT title AS 'Streaming Service', subCount AS 'Subscriber Count' \n" +
                 "FROM platforms \n" +
                 "ORDER BY platformID ASC \n" +
-                "LIMIT 15;\n";
+                "LIMIT 35;\n";
         try(
                 Connection conn = DriverManager.getConnection(connectUrl,user, password);
                 Statement statement = conn.createStatement();
@@ -49,7 +49,6 @@ public class DBUtility {
         {
             while(resultSet.next()){
                 series.getData().add(new XYChart.Data<>(resultSet.getString("Streaming Service"), resultSet.getInt("Subscriber Count")));
-                series.setName(resultSet.getString("Streaming Service"));
             }
         }
         catch (Exception e){

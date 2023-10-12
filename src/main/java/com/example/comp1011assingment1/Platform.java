@@ -29,25 +29,40 @@ public class Platform {
     public String getTitle() {
         return title;
     }
-
+    //Checks to see if the string variable is under 50 characters.
     public void setTitle(String title) {
-        this.title = title;
+        if(title.length() <= 50){
+            this.title = title;
+        }
+        else{
+            throw new IllegalArgumentException("Title must be 50 characters or under.");
+        }
     }
 
     public String getParentCompany() {
         return parentCompany;
     }
-
+    //Checks to see if the string variable is under 50 characters.
     public void setParentCompany(String parentCompany) {
-        this.parentCompany = parentCompany;
+        if(title.length() <= 50){
+            this.parentCompany = parentCompany;
+        }
+        else{
+            throw new IllegalArgumentException("Parent Company must be 50 characters or under.");
+        }
     }
 
     public String getAvailibleCountries() {
         return availibleCountries;
     }
-
+    //Checks to see if the string variable is under 100 characters.
     public void setAvailibleCountries(String availibleCountries) {
-        this.availibleCountries = availibleCountries;
+        if(title.length() <= 100){
+            this.availibleCountries = availibleCountries;
+        }
+        else{
+            throw new IllegalArgumentException("Available Countries must be 100 characters or under.");
+        }
     }
 
     public int getSubCount() {

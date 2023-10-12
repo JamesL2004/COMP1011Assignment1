@@ -9,17 +9,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011assingment1.ChartViewController">
+<AnchorPane id="chartView" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011assingment1.ChartViewController">
    <children>
       <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1200.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="titleLabel" text="Comparing Streaming Platforms Subscribers and There Price" />
-            <ScatterChart fx:id="scatterChart">
+            <Label id="titleLabel2" text="The 35 Most Popular Streaming Services" />
+            <ScatterChart fx:id="scatterChart" prefHeight="552.0" prefWidth="1140.0" VBox.vgrow="ALWAYS">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis id="titleAxis" label="Streaming Services" side="BOTTOM" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis id="numAxis" label="# of Subscribers" side="LEFT" />
               </yAxis>
             </ScatterChart>
             <Button mnemonicParsing="false" onAction="#changeToTableView" text="Go To Table View" />
