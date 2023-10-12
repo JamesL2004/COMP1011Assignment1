@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Young+Serif&display=swap');
-.root{
+#tableView{
     -fx-font-size: 20px;
     -fx-background-image: url("images/background-image.jpg");
     -fx-background-size: cover;
@@ -21,7 +21,8 @@
     -fx-font-size: 25px;
 }
 #chartView{
-    -fx-background-image: url("images/chart-backgound-img.jpg");
+    -fx-font-size: 20px;
+    -fx-background-color: linear-gradient(to bottom, #0e0e0e, #3E3938);
     -fx-background-size: cover;
 }
 #titleLabel{
